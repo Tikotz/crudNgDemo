@@ -12,16 +12,17 @@ import { AddCourseComponent } from './components/add-course/add-course.component
 import { EditCourseComponent } from './components/edit/edit-course.component';
 import { DeleteCourseComponent } from './components/delete/delete-course.component';
 import {HttpClientModule} from '@angular/common/http';
+import { AuthGuardService } from './services/auth-guard.service';
 
 
 const appRoutes:Routes =[
   {path: '', component: LoginComponent},
   {path: 'login', component: LoginComponent},
-  {path:'dashboard', component: DashboardComponent},
-  {path:'courses', component: CoursesComponent},
-  {path:'courses/add-Course', component: AddCourseComponent},
-  {path:'courses/delete/:id', component:DeleteCourseComponent},
-  {path:'courses/edit/:id', component: EditCourseComponent},
+  {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuardService]},
+  {path:'courses', component: CoursesComponent, canActivate:[AuthGuardService]},
+  {path:'courses/add-Course', component: AddCourseComponent, canActivate:[AuthGuardService]},
+  {path:'courses/delete/:id', component:DeleteCourseComponent, canActivate:[AuthGuardService]},
+  {path:'courses/edit/:id', component: EditCourseComponent, canActivate:[AuthGuardService]},
 ];
 
 @NgModule({

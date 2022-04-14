@@ -1,6 +1,19 @@
 {
-  "courses": [
+  "users": [
+    {
+      "id": 1,
+      "email": "abc@gmail.com",
+      "password": "a12345"
+    },
+    {
+      "id": 2,
+      "email": "abdel@gmail.com",
+      "password": "b12345"
+    }
+  ],
 
+
+  "courses": [
     {
       "id": 1,
       "name": "Duffie",
@@ -8,22 +21,6 @@
       "isActive": true,
       "price": 51,
       "updatedAt": "1602213074"
-    },
-    {
-      "id": 2,
-      "name": "Kari",
-      "desc": "Northern fur seal",
-      "isActive": true,
-      "price": 15,
-      "updatedAt": "1476529183"
-    },
-    {
-      "id": 3,
-      "name": "Liesa",
-      "desc": "Tokay gecko",
-      "isActive": true,
-      "price": 40,
-      "updatedAt": "1562052079"
     },
     {
       "id": 4,
@@ -34,7 +31,7 @@
       "updatedAt": "1604086721"
     },
     {
-      "id": 5,
+    "id": 5,
       "name": "Purcell",
       "desc": "Opossum, american virginia",
       "isActive": true,
@@ -320,6 +317,10 @@
       "isActive": true,
       "price": 23,
       "updatedAt": "1641475113"
+    },
+    {
+      "name": "BZZZZZZ",
+      "id": 41
     }
   ]
 }
